@@ -1,5 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "pages/index.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe 'pages/index.html.erb', type: :view do
+  it 'displays the title' do
+    render
+
+    expect(rendered).to have_text('Smartflix')
+  end
 end

@@ -11,7 +11,14 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start 'rails' do
+  add_filter '/bin'
+  add_filter '/config'
+  add_filter '/coverage'
+  add_filter '/db'
+  add_filter '/public'
+  add_filter '/vendor'
+end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are

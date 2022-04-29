@@ -19,6 +19,7 @@ SimpleCov.start 'rails' do
   add_filter '/public'
   add_filter '/vendor'
 end
+SimpleCov.start
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are

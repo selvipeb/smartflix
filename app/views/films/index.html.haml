@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+  %body
+    %h1 Smartflix
+    - @films.each do |film|
+      %article
+        %h2= "#{film['title']} (#{film['release_year']})"
+        %p= film['type']
+        %p= film['description']

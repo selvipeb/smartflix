@@ -11,6 +11,7 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
 require 'simplecov'
+require_relative '../app/helpers/films_helper'
 SimpleCov.start 'rails' do
   add_filter '/bin'
   add_filter '/config'
@@ -75,4 +76,5 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include FilmsHelper, type: :feature
 end

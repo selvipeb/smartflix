@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'pages/index.html.erb', type: :view do
+RSpec.describe 'pages/index.html.haml', type: :view do
   it 'displays the title' do
     render
 

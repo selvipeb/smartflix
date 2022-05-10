@@ -1,11 +1,11 @@
+# frozen_string_literal: true
+
 require 'csv'
 
+# This is Films Helper
 module FilmsHelper
-  def get_csv_data
-    data = []
-    CSV.foreach("lib/assets/netflix_titles.csv", headers: true) do |row|
-      data << row.to_h
-    end
-    data
+  FILE_PATH = 'lib/assets/netflix_titles.csv'
+  def csv_data
+    CSV.foreach(FILE_PATH, headers: true).map(&:to_h)
   end
 end

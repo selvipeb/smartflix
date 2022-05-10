@@ -11,7 +11,6 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
 require 'simplecov'
-require_relative '../app/helpers/films_helper'
 SimpleCov.start 'rails' do
   add_filter '/bin'
   add_filter '/config'

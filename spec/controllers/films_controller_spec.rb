@@ -10,13 +10,9 @@ RSpec.describe FilmsController, type: :feature do
       expect(page).to have_content 'Smartflix'
     end
 
-    it 'has netflix titles on page' do
-      some_titles = get_csv_data.pluck('title')[0..10]
-
-      some_titles.each do |title|
-        visit '/'
-        expect(page).to have_content title
-      end
+    it 'does not have the 21th title on page' do
+      visit '/'
+      expect(page).not_to have_content 'Monsters Inside: The 24 Faces of Billy Milligan'
     end
   end
 end

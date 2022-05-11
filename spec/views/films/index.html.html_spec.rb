@@ -22,6 +22,6 @@ RSpec.describe 'films/index.html.haml', type: :view do
 
     render
 
-    expect(rendered).to have_text('Smartflix')
+    expect(rendered).to have_text('Dick Johnson Is Dead')
   end
 end

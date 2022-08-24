@@ -3,6 +3,6 @@
 class FilmsController < ApplicationController
   include FilmsHelper
   def index
-    @films = csv_data.take(20)
+    @films = get_all_films.take(20)
   end
 end

@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class Film < ApplicationRecord
-  MOVIE = 'Movie'.freeze
-  TV_SERIES = 'TV Show'.freeze
+  MOVIE_TYPE = 'Movie'
+  TV_SERIES_TYPE = 'TV Show'
 
   validates :show_type, presence: true
-  validates :show_type, inclusion:  { in: [MOVIE, TV_SERIES] }
+  validates :show_type, inclusion: { in: [MOVIE_TYPE, TV_SERIES_TYPE] }
   validates :title, presence: true
 
   def self.import(params)

@@ -58,6 +58,6 @@ group :development, :test do
   gem 'pry-rails'
   # Add rubocop for better rails codes
   gem 'rubocop'
-  # Add factory bot to create data effectively
+  # Add factory bot for fixtures
   gem 'factory_bot_rails'
 end

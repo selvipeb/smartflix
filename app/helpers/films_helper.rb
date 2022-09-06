@@ -3,8 +3,7 @@
 require 'csv'
 
 module FilmsHelper
-  FILE_PATH = 'lib/assets/netflix_titles.csv'
-  def csv_data
-    CSV.foreach(FILE_PATH, headers: true).map(&:to_h)
+  def get_all_films
+    Film.all
   end
 end
